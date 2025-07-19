@@ -2,18 +2,32 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
+// Konfigurasi lama yang membaca dari .env (bisa Anda aktifkan kembali nanti)
+// const firebaseConfig = {
+//   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+//   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+//   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+//   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+//   appId: import.meta.env.VITE_FIREBASE_APP_ID,
+//   ...(import.meta.env.VITE_FIREBASE_MEASUREMENT_ID && {
+//     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+//   })
+// }
+
+// --- KONFIGURASI BARU ---
+// Menggunakan konfigurasi baru yang Anda berikan.
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  // measurementId hanya diperlukan jika menggunakan Google Analytics
-  ...(import.meta.env.VITE_FIREBASE_MEASUREMENT_ID && {
-    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
-  })
-}
+  apiKey: "AIzaSyCxpejk2TihmLbB_faV7-718tdDZUmeVE4",
+  authDomain: "kanban-eabea.firebaseapp.com",
+  projectId: "kanban-eabea",
+  storageBucket: "kanban-eabea.firebasestorage.app",
+  messagingSenderId: "1047158886576",
+  appId: "1:1047158886576:web:571e84071ceda5e22d6b75",
+  measurementId: "G-DT643D9KT3"
+};
+
+
 
 // Debug logging untuk memastikan konfigurasi terbaca
 console.log('🔥 Firebase Config Debug:')
